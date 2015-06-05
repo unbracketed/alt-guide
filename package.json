@@ -1,0 +1,31 @@
+{
+  "name": "alt-guide",
+  "version": "1.0.0",
+  "description": "A guide and examples for working with the 'alt' Flux library ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unbracketed/alt-guide.git"
+  },
+  "keywords": [
+    "alt",
+    "flux",
+    "react",
+    "tutorial",
+    "examples",
+    "actions",
+    "stores"
+  ],
+  "author": "Brian Luft <brian@lincolnloop.com> (https://github.com/unbracketed)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unbracketed/alt-guide/issues"
+  },
+  "homepage": "https://github.com/unbracketed/alt-guide#readme",
+  "dependencies": {
+    "alt": "^0.16.9"
+  }
+}
