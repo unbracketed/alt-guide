@@ -19,6 +19,7 @@
 
 * DataSource API
 * Using data sources with stores
+* Associating data and fetches with components
 
 ## [Logging and Debugging](logging-debugging.md)
 
