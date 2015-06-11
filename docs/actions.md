@@ -21,6 +21,13 @@ There are several ways of declaring actions within Alt, giving you the choice be
 
 A utility function which generates action creators based on the names you provide. This is a good option for prototyping, or for when you don't need any additional handling in your action creators and can just pass the action payload through to the dispatcher. These generic action creators can also work well with reduce-style Stores.
 
+```
+const actions = alt.generateActions('go', 'stop')
+```
+
+Now `actions` will be an object with two instance methods: `go()` and `stop()`.
+
+
 
 ### createAction
 
@@ -29,3 +36,32 @@ A utility function which generates action creators based on the names you provid
 ### addActions
 
 ## Accessing and Calling Action Creators
+
+## Logging and Debugging
+
+Alt provides a utility for registering to listen to actions:
+
+```
+import Alt from 'alt'
+import ActionListeners from 'alt/utils/ActionListeners'
+
+const alt = new Alt()
+const listener = new ActionListeners(alt)
+
+const axns = alt.generateActions('go', 'stop')
+const id = listener.addActionListener(axns.GO, (data, actionType) => {
+  console.log('ACTION:', actionType.id, 'DATA:', data)
+})
+```
+
+Now calls to `axns.go()` will be logged to the console.
+
+```
+axns.go()
+axns.go({year: 1985})
+```
+*outputs*
+```
+ACTION: global.go DATA: undefined
+ACTION: global.go DATA: { year: 1985 }
+```

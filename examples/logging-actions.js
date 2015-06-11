@@ -2,17 +2,15 @@ import Alt from 'alt'
 import ActionListeners from 'alt/utils/ActionListeners'
 
 const alt = new Alt()
-
-/*
-  symbols don't seem to be available through alt.actions.global
-*/
-const axns = alt.generateActions('one', 'two')
 const listener = new ActionListeners(alt)
 
+const axns = alt.generateActions('go', 'stop')
+const id = listener.addActionListener(axns.GO, (data, actionType) => {
+  console.log('ACTION:', actionType.id, 'DATA:', data)
+})
 
-const id = listener.addActionListener(axns.ONE, (name, details) => { console.log(name, details) })
-axns.one({data: 'data'})
-alt.actions.global.one({global: 'more'})
+axns.go()
+alt.actions.global.go({year: 1985})
 
 
 const uAxns = alt.createActions({
