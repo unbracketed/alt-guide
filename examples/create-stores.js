@@ -11,3 +11,6 @@ console.log('STORE', store)
 console.log('getState via alt.stores', alt.stores.TheStore.getState())
 console.log('setState via alt.stores', alt.stores.TheStore.setState)
 console.log('ALT', alt)
+
+
+//TODO addStore

@@ -1,3 +1,10 @@
+Installing
+
+  from npm
+  from repo/source
+
+  
+
 Singleton vs. Instance
 
 --------
@@ -8,7 +15,7 @@ What is an action?
 
 Actions, Action creators
 
-Actions can be thought of the as the application's interal API. Changes in state begin with Actions, so the set of Actions for an application can be thought of as an index of the state transitioning operations for an application. It is natural to associate generating an action from a user interaction (like a button click handler). In practice, other types of actions might be generated and dispatched which may or may not be directly associated with user interaction. For example, a websocket receiving data will generate an action to update the store. 
+Actions can be thought of the as the application's interal API. Changes in state begin with Actions, so the set of Actions for an application can be thought of as an index of the state transitioning operations for an application. It is natural to associate generating an action from a user interaction (like a button click handler). In practice, other types of actions might be generated and dispatched which may or may not be directly associated with user interaction. For example, a websocket receiving data will generate an action to update the store.
 
 
 Declaring Actions

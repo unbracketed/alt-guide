@@ -2,6 +2,12 @@ import Alt from 'alt'
 
 const alt = new Alt()
 
+
+//does generateActions bind the symbol?
+
+
+
+
 /*
  Create a global action called 'go', using a function
 */
@@ -9,6 +15,19 @@ const goAction = alt.createAction('go', () => {console.log('Go!')})
 
 goAction()
 console.log(goAction)
+console.log(alt.getActions('global'))
+console.log('ACTIONS', alt.actions)
+
+
+//addActions doesn't return anything
+
+//erases previous action
+alt.addActions('global', 'go' )
+console.log('ACTIONS', alt.actions)
+
+
+const addAxnsArr = alt.addActions('global', ['go'] )
+console.log('ACTIONS', alt.actions)
 
 /*
  Create a namespaced action from a POJO
@@ -46,6 +65,7 @@ const realYoAction = alt.createActions({
 })
 realYoAction.yo()
 console.log(realYoAction)
+console.log('getActions ===', alt.getActions('RealYo'))
 
 const faker = alt.createActions({
   displayName: 'RealYo',
@@ -54,6 +74,7 @@ const faker = alt.createActions({
 faker.yo()
 console.log(faker)
 console.log(alt.actions)
+console.log('getActions ===', alt.getActions('RealYo'))
 /*
  Create namespaced actions using a class
 */

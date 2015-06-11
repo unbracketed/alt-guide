@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/unbracketed/alt-guide#readme",
   "dependencies": {
-    "alt": "^0.16.9"
+    "alt": "^0.16.10"
   }
 }
