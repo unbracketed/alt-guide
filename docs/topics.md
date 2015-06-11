@@ -1,28 +1,31 @@
-## [Installing](install.md)
+## [Installation and First Steps](install.md)
 
-  from npm
-  from repo/source
-
-
-
-## Singleton vs. Instance
-
-
+* How to install Alt (npm / from the repo / for development)
+* How to start a new project
+* How to use Alt with different require/module systems
 
 ## [Actions](actions.md)
 
-##Stores
+* How to declare actions
+* How to dispatch actions
+* How to log actions for debugging
 
+## [Stores](stores.md)
 
- store model
+* How to create stores
+* Getting and setting state
 
- reduce
+## [Data I/O and DataSources](datasources.md)
 
-## Data I/O and DataSources
+* DataSource API
+* Using data sources with stores
 
+## [Logging and Debugging](logging-debugging.md)
 
-## Logging, Debugging
+* How to log actions, dispatches, store change events
+* Using the Chrome extension
 
+## [Isomorphic](isomorphic.md)
 
-
-## Isomorphic
+* Considerations for isomorphic applications
+* Alt utilities
